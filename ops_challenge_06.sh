@@ -8,8 +8,8 @@
 
 # Objectives:
 # [X] Create a bash function that prints all currently listening, well-known ports of the targeted computer.
-# [] Call the function in your script after accepting IP address of the target PC from the user.
-# [] Configure your script to accept user input and return only ports with status equal to user input. For example, user may type “CLOSED” and your script will return only ports that are closed status. If the user types “ALL” the script should return all ports. 
+# [X] Call the function in your script after accepting IP address of the target PC from the user.
+# [X] Configure your script to accept user input and return only ports with status equal to user input. For example, user may type “CLOSED” and your script will return only ports that are closed status. If the user types “ALL” the script should return all ports. 
 
 function get_ip () {
     echo "Enter a target IP address:"
@@ -24,6 +24,7 @@ function get_ip () {
         fi
     target_ip_address "$target_ip" "$status"
 }
+
 
 function list_open_ports () {
     command ss -lntup #socket statistics shows all listening ports, numeric values, tcp, udp protocols and prints to screen
